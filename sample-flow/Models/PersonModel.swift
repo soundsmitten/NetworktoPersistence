@@ -18,6 +18,10 @@ class PersonModel: Object {
 
     // See Persistable `meta` param.
     dynamic var someRandomMetaValue: Int = 0
+
+    override class func primaryKey() -> String? {
+        return "id"
+    }
 }
 
 // utility stuff
