@@ -3,27 +3,23 @@
 
 import RealmSwift
 
-enum PersistableEncodingError: Error {
-    case error(message: String)
-}
-
-enum ModelDecodingError: Error {
-    case error(message: String)
-}
+typealias Persistable = PersistableEncodable & PersistableDecodable
 
 // I feel that throwing an error on these bridging methods
 // seems to be more elegant than returning optionals?
-protocol Persistable {
-    associatedtype ManagedObject: Object
+protocol PersistableEncodable {
+    associatedtype Managed: Object
 
-    init(managedObject: ManagedObject) throws
+    init?(managedObject: Managed)
 
     // meta param allows for some custom options/props to be passed in.
-    func managedObject(meta: PersistableMetadata?) throws -> ManagedObject
+    func managedObject(meta: PersistableMetadata?) -> Managed?
 }
 
-extension Persistable {
-    init(managedObject: ManagedObject) {}
+protocol PersistableDecodable {
+    associatedtype Managed: Object
+
+    init?(managedObject: Managed)
 }
 
 typealias PersistableMetadata = Codable

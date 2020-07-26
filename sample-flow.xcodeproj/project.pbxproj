@@ -12,6 +12,7 @@
 		C1BD60BAE6282DEE69A6D59D /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6501A99F0BE4A45B67F9 /* PersonModel.swift */; };
 		C1BD60D54EFF5315527936F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD613E4CDEE0FC53E1D10E /* AppDelegate.swift */; };
 		C1BD60E3CF82C45774A02835 /* sample_flowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6FD9193CC17B1E86EA98 /* sample_flowTests.swift */; };
+		C1BD611CF6A1282A914AA3F0 /* RealmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6C1FF028E338AAA8DBF1 /* RealmDataManager.swift */; };
 		C1BD62AFF26B79469D5688E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1BD621DF1E8D028E148AFAC /* Assets.xcassets */; };
 		C1BD6A5D086CB61310334C95 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6995CCD7D95AA0D93D23 /* Persistable.swift */; };
 		C1BD6B41923AEF8E7C69CC58 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6DF42DAC8DBE0671F169 /* Person.swift */; };
@@ -20,6 +21,7 @@
 		C1BD6C98A9511E70B879D618 /* Person+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6E66EC9ED9649515CFBE /* Person+Persistable.swift */; };
 		C1BD6CB26C144250D476DE6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD68D84D17C1C232154119 /* ViewController.swift */; };
 		C1BD6D067789CD758E817A9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1BD681CBCAEA7080076311F /* LaunchScreen.storyboard */; };
+		C1BD6FD79A8ECD0CC9348FAD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6EC4DD9CE1E643BAE972 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +49,11 @@
 		C1BD68D84D17C1C232154119 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C1BD6995CCD7D95AA0D93D23 /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 		C1BD69E3942B75CCE21E8A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		C1BD6C1FF028E338AAA8DBF1 /* RealmDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDataManager.swift; sourceTree = "<group>"; };
 		C1BD6D666857D29902855C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		C1BD6DF42DAC8DBE0671F169 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		C1BD6E66EC9ED9649515CFBE /* Person+Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+Persistable.swift"; sourceTree = "<group>"; };
+		C1BD6EC4DD9CE1E643BAE972 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C1BD6FAEBC52DE46A62C3E6B /* sample-flowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sample-flowTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BD6FD9193CC17B1E86EA98 /* sample_flowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sample_flowTests.swift; sourceTree = "<group>"; };
 		C1BD6FE86190FF55696EFD6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,6 +110,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C1BD62AC281E0EA688E0C6D0 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				C1BD6EC4DD9CE1E643BAE972 /* DataManager.swift */,
+				C1BD6C1FF028E338AAA8DBF1 /* RealmDataManager.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
 		C1BD62EF22F11AE48DB2FBC3 /* sample-flowTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +166,7 @@
 				C1BD68D84D17C1C232154119 /* ViewController.swift */,
 				C1BD6CDE2D6B1F427751B5BD /* NetworkModels */,
 				C1BD638FE1A30D5B6395B291 /* Models */,
+				C1BD62AC281E0EA688E0C6D0 /* Persistence */,
 			);
 			path = "sample-flow";
 			sourceTree = "<group>";
@@ -336,6 +350,8 @@
 				C1BD60BAE6282DEE69A6D59D /* PersonModel.swift in Sources */,
 				C1BD6A5D086CB61310334C95 /* Persistable.swift in Sources */,
 				C1BD6C98A9511E70B879D618 /* Person+Persistable.swift in Sources */,
+				C1BD6FD79A8ECD0CC9348FAD /* DataManager.swift in Sources */,
+				C1BD611CF6A1282A914AA3F0 /* RealmDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

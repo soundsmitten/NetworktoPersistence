@@ -5,9 +5,10 @@ struct PersonMetaData: PersistableMetadata {
 }
 
 extension Person: Persistable {
-    init(managedObject: PersonModel) throws {
+    init?(managedObject: PersonModel) {
         guard managedObject.id != 0 else {
-            throw ModelDecodingError.error(message: "Invalid id.")
+            assertionFailure("Invalid id")
+            return nil
         }
 
         id = managedObject.id
@@ -23,9 +24,9 @@ extension Person: Persistable {
                               lon: managedObject.longitude)
     }
 
-    func managedObject(meta: PersistableMetadata?) throws -> PersonModel {
+    func managedObject(meta: PersistableMetadata?) -> PersonModel? {
         // if we want to require properties, unwrap them and throw an error if missing.
-        // Before I tried reflection, and listing out keypaths,
+        // Before I tried reflection, and listing out KeyPaths,
         // but it wasn't worth fighting Swift.
         guard
             let meta = meta as? PersonMetaData,
@@ -39,7 +40,8 @@ extension Person: Persistable {
             let zip = geography.zip,
             let latitude = geography.lat,
             let longitude = geography.lon else {
-            throw PersistableEncodingError.error(message: "\(Person.self) is missing required values")
+            assertionFailure("\(Person.self) is missing required values")
+            return nil
         }
 
         let person = PersonModel()
