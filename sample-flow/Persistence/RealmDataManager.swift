@@ -3,6 +3,7 @@
 import RealmSwift
 
 extension Object: Managed {}
+extension Results: Managed{}
 
 class RealmDataManager: DataManager {
     private let realm: Realm?
@@ -91,7 +92,7 @@ class RealmDataManager: DataManager {
     func fetch<T: Managed>(_ model: T.Type,
                            predicate: NSPredicate?,
                            sortOptions: SortOptions?,
-                           completion: (([T]) -> ())) throws {
+                           completion: ((Managed) -> ())) {
         guard let realm = realm else {
             assertionFailure("Realm does not exist")
             return
@@ -111,6 +112,8 @@ class RealmDataManager: DataManager {
             objects = objects.sorted(byKeyPath: sortOptions.keyPath,
                                      ascending: sortOptions.ascending)
         }
+
+        completion(objects)
     }
 
     func nuke() {

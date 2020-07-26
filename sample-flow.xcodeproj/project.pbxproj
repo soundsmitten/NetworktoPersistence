@@ -13,7 +13,9 @@
 		C1BD60D54EFF5315527936F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD613E4CDEE0FC53E1D10E /* AppDelegate.swift */; };
 		C1BD60E3CF82C45774A02835 /* sample_flowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6FD9193CC17B1E86EA98 /* sample_flowTests.swift */; };
 		C1BD611CF6A1282A914AA3F0 /* RealmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6C1FF028E338AAA8DBF1 /* RealmDataManager.swift */; };
+		C1BD62A53393FFAEAAE143E2 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6E42FBA852314E14A507 /* DataManagerTests.swift */; };
 		C1BD62AFF26B79469D5688E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1BD621DF1E8D028E148AFAC /* Assets.xcassets */; };
+		C1BD66DB7E9007787BEBAF47 /* RealmManagedObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6344478CF7BE5744CA59 /* RealmManagedObserver.swift */; };
 		C1BD6A5D086CB61310334C95 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6995CCD7D95AA0D93D23 /* Persistable.swift */; };
 		C1BD6B41923AEF8E7C69CC58 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6DF42DAC8DBE0671F169 /* Person.swift */; };
 		C1BD6BABE043975A255FBE1E /* Geography.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD633CD9DF2F3521F95B45 /* Geography.swift */; };
@@ -21,6 +23,7 @@
 		C1BD6C98A9511E70B879D618 /* Person+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6E66EC9ED9649515CFBE /* Person+Persistable.swift */; };
 		C1BD6CB26C144250D476DE6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD68D84D17C1C232154119 /* ViewController.swift */; };
 		C1BD6D067789CD758E817A9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1BD681CBCAEA7080076311F /* LaunchScreen.storyboard */; };
+		C1BD6D633F755ED39DFD8966 /* ManagedObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6F68F6DC06E1E4B1F65C /* ManagedObserver.swift */; };
 		C1BD6FD79A8ECD0CC9348FAD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BD6EC4DD9CE1E643BAE972 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +47,7 @@
 		C1BD613E4CDEE0FC53E1D10E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1BD621DF1E8D028E148AFAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1BD633CD9DF2F3521F95B45 /* Geography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geography.swift; sourceTree = "<group>"; };
+		C1BD6344478CF7BE5744CA59 /* RealmManagedObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManagedObserver.swift; sourceTree = "<group>"; };
 		C1BD63C7468201D68B907E41 /* sample-flow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sample-flow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BD6501A99F0BE4A45B67F9 /* PersonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		C1BD68D84D17C1C232154119 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,8 +56,10 @@
 		C1BD6C1FF028E338AAA8DBF1 /* RealmDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDataManager.swift; sourceTree = "<group>"; };
 		C1BD6D666857D29902855C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		C1BD6DF42DAC8DBE0671F169 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		C1BD6E42FBA852314E14A507 /* DataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		C1BD6E66EC9ED9649515CFBE /* Person+Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+Persistable.swift"; sourceTree = "<group>"; };
 		C1BD6EC4DD9CE1E643BAE972 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		C1BD6F68F6DC06E1E4B1F65C /* ManagedObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObserver.swift; sourceTree = "<group>"; };
 		C1BD6FAEBC52DE46A62C3E6B /* sample-flowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sample-flowTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BD6FD9193CC17B1E86EA98 /* sample_flowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sample_flowTests.swift; sourceTree = "<group>"; };
 		C1BD6FE86190FF55696EFD6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 			children = (
 				C1BD69E3942B75CCE21E8A74 /* Info.plist */,
 				C1BD6FD9193CC17B1E86EA98 /* sample_flowTests.swift */,
+				C1BD6E42FBA852314E14A507 /* DataManagerTests.swift */,
 			);
 			path = "sample-flowTests";
 			sourceTree = "<group>";
@@ -143,6 +150,15 @@
 				C1BD6E66EC9ED9649515CFBE /* Person+Persistable.swift */,
 			);
 			path = PersistableExtensions;
+			sourceTree = "<group>";
+		};
+		C1BD6BF682284B381DD3C45D /* Observation */ = {
+			isa = PBXGroup;
+			children = (
+				C1BD6F68F6DC06E1E4B1F65C /* ManagedObserver.swift */,
+				C1BD6344478CF7BE5744CA59 /* RealmManagedObserver.swift */,
+			);
+			path = Observation;
 			sourceTree = "<group>";
 		};
 		C1BD6CDE2D6B1F427751B5BD /* NetworkModels */ = {
@@ -167,6 +183,7 @@
 				C1BD6CDE2D6B1F427751B5BD /* NetworkModels */,
 				C1BD638FE1A30D5B6395B291 /* Models */,
 				C1BD62AC281E0EA688E0C6D0 /* Persistence */,
+				C1BD6BF682284B381DD3C45D /* Observation */,
 			);
 			path = "sample-flow";
 			sourceTree = "<group>";
@@ -352,6 +369,9 @@
 				C1BD6C98A9511E70B879D618 /* Person+Persistable.swift in Sources */,
 				C1BD6FD79A8ECD0CC9348FAD /* DataManager.swift in Sources */,
 				C1BD611CF6A1282A914AA3F0 /* RealmDataManager.swift in Sources */,
+				C1BD62A53393FFAEAAE143E2 /* DataManagerTests.swift in Sources */,
+				C1BD6D633F755ED39DFD8966 /* ManagedObserver.swift in Sources */,
+				C1BD66DB7E9007787BEBAF47 /* RealmManagedObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

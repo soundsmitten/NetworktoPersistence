@@ -9,6 +9,7 @@ enum DataManagerError: Error {
 }
 
 public protocol Managed {}
+extension Array: Managed {}
 
 protocol DataManager {
     func create<T: Managed>(_ model: T.Type, completion: @escaping ((T) -> Void)) throws
@@ -16,6 +17,6 @@ protocol DataManager {
     func update(object: Managed) throws
     func delete(object: Managed) throws
     func deleteAll<T: Managed>(_ model: T.Type) throws
-    func fetch<T: Managed>(_ model: T.Type, predicate: NSPredicate?, sortOptions: SortOptions?, completion: (([T]) -> ())) throws
+    func fetch<T: Managed>(_ model: T.Type, predicate: NSPredicate?, sortOptions: SortOptions?, completion: (Managed) -> ())
     func nuke() throws
 }
