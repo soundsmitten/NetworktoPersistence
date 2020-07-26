@@ -6,7 +6,7 @@ struct PersonMetaData: PersistableMetadata {
 
 extension Person: Persistable {
     init(managedObject: PersonModel) throws {
-        guard managedObject.id != 0 {
+        guard managedObject.id != 0 else {
             throw ModelDecodingError.error(message: "Invalid id.")
         }
 
